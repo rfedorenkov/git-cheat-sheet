@@ -67,7 +67,7 @@ File **HEAD** - one of .git service files folders. It points to the commit that 
 - changed: The modified state means that Git compared the contents of the file with the last saved version and found differences. For example, a file was committed and then changed.
 
 ```mermaid
-flowchart TD
+graph LR;
     A[untracked] -- git add --> B{staged};
     B -- git commit --> C[tracked];
     C -- changed --> D[modified];
