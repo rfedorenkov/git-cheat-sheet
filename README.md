@@ -52,3 +52,8 @@ int main(void) {
 }
 ```
 ---
+
+# HEAD
+---
+File **HEAD** - one of .git service files folders. It points to the commit that was made last (which is what the newest one is). Inside HEAD is a link to the service file: _refs/heads/main_. If you look at this file, you can see the hash of the last commit. _e007f5035f113f9abca78fe2149c593959da5eb7_
+---
