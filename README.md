@@ -74,3 +74,44 @@ graph LR;
     D -- git add --> B;
 ```
 ---
+
+# Git commands
+
+## Initializing the repository
+- git init (initializing the repository)
+
+## Synchronization of local and remote repositories
+- git remote add origin (link the local repository to the remote one with the URL)
+- git remote -v (check that the reoisutiries are actually connected)
+- git push -u origin main (for the first time, download all commits from the local repository to a remote one called origin)
+- git push (upload commits to a remote repository after it has been linked using the -u flag)
+
+## Preparing a file for commit
+- git add todo.txt (prepare the todo.txt file for commit)
+- git add --all (prepare for commit at once all the files in which there were changes, and all new files)
+- git add . (preapre the current folder and all the files in it for commit)
+
+## Creating and publishing a commit
+- git commit -m 'Commit comment' (make a commit and leave a comment to make it easier to understand what changes have been made)
+- git push (add changes to the remote repository)
+
+## Viewing commit information
+- git log (display a detailed history of commits)
+- git log --oneline (show brief information about commits: a shortened hash and message)
+
+## View file status
+- git status (show the current state of the repository)
+
+## Adding changes to the latest commit
+- git commit --amend --no-edit (add changes to the last commit and leave the message the same)
+- git commit --amend -m 'New message' (change the message for the last commit to New message)
+
+## "Rollback" of files and commits
+- git restore --staged hello.txt (transfer the hello.txt file from the staged state back to untracked or modified)
+- git restore hello.txt (returh the hello.txt file to the latest version that was saved via git commit or git add)
+- git resed --hard b576d89 (delete all uncommitted changes from staging and the "working area" up to specified commit)
+
+## View changes
+- git diff (show changes in the "working area", that is, in modified files)
+- git diff a9928ab 11bada1 (print the difference between two commits)
+- git diff --staged (show changes that have been added to staged files)
